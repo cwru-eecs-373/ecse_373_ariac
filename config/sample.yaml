@@ -26,7 +26,7 @@ orders:
           rpy: [0, 0, 0]
 
 models_over_bins:
-  bin3:
+  bin6:
     models:
       gear_part:
         xyz_start: [0.1, 0.1, 0.0]
@@ -34,7 +34,7 @@ models_over_bins:
         rpy: [0, 0, 0]
         num_models_x: 3
         num_models_y: 4
-  bin4:
+  bin5:
     models:
       gasket_part:
         xyz_start: [0.1, 0.2, 0.0]
@@ -42,7 +42,7 @@ models_over_bins:
         rpy: [0, 0, 'pi/4']
         num_models_x: 2
         num_models_y: 3
-  bin2:
+  bin4:
     models:
       piston_rod_part:
         xyz_start: [0.1, 0.15, 0.0]

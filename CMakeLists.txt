@@ -4,11 +4,15 @@ project(ecse_373_ariac)
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
 
+## Add a subdirectory
+add_subdirectory(ur_kinematics)
+
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   osrf_gear
+  ur_kinematics
 )
 
 ## System dependencies are found with CMake's conventions
