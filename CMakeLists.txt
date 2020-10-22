@@ -12,7 +12,7 @@ add_subdirectory(ur_kinematics)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   osrf_gear
-  ur_kinematics
+  rviz
 )
 
 ## System dependencies are found with CMake's conventions
