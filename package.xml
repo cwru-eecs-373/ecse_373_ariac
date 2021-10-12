@@ -20,7 +20,7 @@
   <!-- Optional attribute type can be: website, bugtracker, or repository -->
   <!-- Example: -->
   <!-- <url type="website">http://wiki.ros.org/ecse_373_ariac</url> -->
-  <url type="website">https://csecode.case.edu/ecse_373/ecse_373_ariac</url>
+  <url type="website">https://github.com/cwru-eecs-373/ecse_373_ariac.git</url>
 
   <!-- Author tags are optional, multiple are allowed, one per tag -->
   <!-- Authors do not have to be maintainers, but could be -->

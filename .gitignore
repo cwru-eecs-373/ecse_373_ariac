@@ -1,0 +1,10 @@
+# GIT .gitignore file
+
+# Ignore VS Code directory
+.vscode
+
+# Backup files
+*~
+*.bak
+\#*\#
+.\#* 

@@ -109,6 +109,7 @@ catkin_package(
 #  LIBRARIES ecse_373_ariac
 #  CATKIN_DEPENDS ariac3
 #  DEPENDS system_lib
+  DEPENDS ur_kinematics
 )
 
 ###########

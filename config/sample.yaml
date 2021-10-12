@@ -8,6 +8,7 @@ orders:
   order_0:
     announcement_condition: time
     announcement_condition_value: 0.0
+    destinations: [any]
     products:
       part_0:
         type: piston_rod_part
@@ -17,12 +18,24 @@ orders:
       part_1:
         type: gear_part
         pose:
-          xyz: [-0.1, 0, 0]
+          xyz: [-0.1, 0.1, 0]
           rpy: [0, 0, 'pi']
       part_2:
         type: gear_part
         pose:
           xyz: [-0.1, 0.15, 0]
+          rpy: [0, 0, 0]
+
+  order_1:
+    announcement_condition: time
+    announcement_condition_value: 75.0
+    shipment_count: 2
+    destinations: [agv2, agv1]
+    products:
+      part_0:
+        type: piston_rod_part
+        pose:
+          xyz: [0.1, -0.1, 0]
           rpy: [0, 0, 0]
 
 models_over_bins:
