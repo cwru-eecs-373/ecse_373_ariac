@@ -1,0 +1,11 @@
+--- linear_arm_actuator.urdf.xacro.old	2021-11-03 11:09:50.346883681 -0400
++++ linear_arm_actuator.urdf.xacro	2021-11-03 11:11:35.462553384 -0400
+@@ -2,7 +2,7 @@
+ <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+ 
+ <xacro:property name="base_len" value="0.2" />
+-<xacro:property name="actuator_len" value="2.76" />
++<xacro:property name="actuator_len" value="5.52" />
+ <xacro:property name="actuator_height" value="0.1" />
+ 
+ <xacro:arg name="use_velocity_interface" default="false" />

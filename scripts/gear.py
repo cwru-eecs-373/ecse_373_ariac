@@ -37,7 +37,7 @@ template_files = [
     os.path.join(launch_dir, 'gear.launch.template'),
     os.path.join(launch_dir, 'gear.urdf.xacro.template'),
 ]
-arm_template_file = os.path.join(launch_dir, 'arm.urdf.xacro.template')
+arm_template_file = os.path.join(os.path.join(rospack.get_path('ecse_373_ariac'), 'scripts'), 'arm.urdf.xacro.template')
 arm_configs = {
     'arm1': {
         'arm_type': 'ur10',

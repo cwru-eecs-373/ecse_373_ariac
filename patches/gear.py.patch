@@ -1,0 +1,40 @@
+--- /opt/ros/melodic/lib/osrf_gear/gear.py	2019-05-21 19:17:20.000000000 -0400
++++ gear.py	2021-11-03 11:13:36.274170309 -0400
+@@ -37,34 +37,18 @@
+     os.path.join(launch_dir, 'gear.launch.template'),
+     os.path.join(launch_dir, 'gear.urdf.xacro.template'),
+ ]
+-arm_template_file = os.path.join(launch_dir, 'arm.urdf.xacro.template')
++arm_template_file = os.path.join(os.path.join(rospack.get_path('ecse_373_ariac'), 'scripts'), 'arm.urdf.xacro.template')
+ arm_configs = {
+     'arm1': {
+         'arm_type': 'ur10',
+         'pose': {
+-            'xyz': [0.3, 0.92, 0.9],
++            'xyz': [0.3, 0.0, 0.9],
+             'rpy': [0.0, 0.0, 0.0]
+         },
+         'default_initial_joint_states': {
+             'elbow_joint': 2.14,
+             'linear_arm_actuator_joint': 0,
+-            'shoulder_lift_joint': -2.0,
+-            'shoulder_pan_joint': 3.14,
+-            'wrist_1_joint': 3.27,
+-            'wrist_2_joint': -1.51,
+-            'wrist_3_joint': 0,
+-        }
+-    },
+-    'arm2': {
+-        'arm_type': 'ur10',
+-        'pose': {
+-            'xyz': [0.3, -0.92, 0.9],
+-            'rpy': [0.0, 0.0, 0.0]
+-        },
+-        'default_initial_joint_states': {
+-            'elbow_joint': 2.14,
+-            'linear_arm_actuator_joint': 0,
+-            'shoulder_lift_joint': -2.0,
++            'shoulder_lift_joint': 4.28,
+             'shoulder_pan_joint': 3.14,
+             'wrist_1_joint': 3.27,
+             'wrist_2_joint': -1.51,

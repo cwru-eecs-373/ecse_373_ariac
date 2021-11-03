@@ -1,0 +1,11 @@
+--- arm.urdf.xacro.template.old	2021-11-03 11:09:44.198902899 -0400
++++ arm.urdf.xacro.template	2021-11-03 11:11:02.942655901 -0400
+@@ -8,7 +8,7 @@
+   <xacro:property name="base_link" value="base_link" />
+ 
+   <xacro:include filename="$(find osrf_gear)/launch/vacuum_gripper/vacuum_gripper.urdf.xacro" />
+-  <xacro:include filename="$(find osrf_gear)/launch/linear_arm_actuator/linear_arm_actuator.urdf.xacro" />
++  <xacro:include filename="$(find ecse_373_ariac)/scripts/linear_arm_actuator.urdf.xacro" />
+ 
+   <xacro:create_vacuum_gripper wrist_link="${wrist_link}" arm_namespace="/ariac/@(arm.name)">
+     <origin xyz="0 0.1 0" rpy="${90 * 0.0174533} 0 0" />
