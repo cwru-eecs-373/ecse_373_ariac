@@ -11,7 +11,7 @@ add_subdirectory(ur_kinematics)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  osrf_gear
+  # osrf_gear
   ur_kinematics
 )
 
