@@ -17,6 +17,14 @@ To run the modified ARIAC simulation, use the following command:
 
 > `roslaunch ecse_373_ariac ecse_373_ariac.launch`
 
+### ROS Noetic
+
+This package has been updated to work with an updated version of the ARIAC 2019 package on ROS Noetic.  The update is incomplete of the ARIAC 2019 package, however, and there are some limitations.  The environment and trial configurations cannot be udated as the python script used to generate them does not work with python3.  
+
+Static files for `arm1.urdf.xacro`, `gear.urdf.xacro`, and `gear.world` have been generated and copied into this package.  The `gear.launch` file was also generated and copied into this package and is now included directly from the `ecse_373_ariac.launch` file.  The `ecse_373_ariac.launch` file was updated to use the static files by default, can work the old way by invoking the launch file with `python:=true`.
+
+The issue preventing full updating is in the `em` module for python3 which does not seem to actually work with python3 even though it is distributed as such.  At this time, a bug report is underdevelopment, but has not yet been submitted.
+
 ## Explanation
 
 The `sample_environment.launch` for the `osrf_gear` package was copied, renamed `ecse_373_ariac.launch` to provide the launch file for the course project environment, and edited to execute a local version of `gear.py` using  `trial_01_config.yaml` and `environment_config.yaml`.

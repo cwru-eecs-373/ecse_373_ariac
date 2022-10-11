@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro"
+       name="ur10">
+
+  <!-- include the arm xacro -->
+  <xacro:include filename="$(find osrf_gear)/launch/ur10/ur10.urdf.xacro" />
+  <xacro:property name="wrist_link" value="wrist_3_link" />
+  <xacro:property name="base_link" value="base_link" />
+
+  <xacro:include filename="$(find osrf_gear)/launch/vacuum_gripper/vacuum_gripper.urdf.xacro" />
+  <xacro:include filename="$(find ecse_373_ariac)/scripts/linear_arm_actuator.urdf.xacro" />
+
+  <xacro:create_vacuum_gripper wrist_link="${wrist_link}" arm_namespace="/ariac/arm1">
+    <origin xyz="0 0.1 0" rpy="${90 * 0.0174533} 0 0" />
+
+    <grippable_model_types>
+        <type>disk_part</type>
+        <type>gasket_part</type>
+        <type>gear_part</type>
+        <type>piston_rod_part</type>
+        <type>pulley_part</type>
+    </grippable_model_types>
+    <drops_info>
+    </drops_info>
+  </xacro:create_vacuum_gripper>
+
+  <xacro:create_linear_arm_actuator base_link="${base_link}" />
+
+  <link name="world" />
+
+  <joint name="world_joint" type="fixed">
+    <parent link="world" />
+    <child link="linear_arm_actuator" />
+    <origin xyz="0.3 0.0 0.9" rpy="0.0 0.0 0.0" />
+  </joint>
+</robot>
