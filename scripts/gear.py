@@ -48,10 +48,10 @@ arm_configs = {
         'default_initial_joint_states': {
             'elbow_joint': 2.14,
             'linear_arm_actuator_joint': 0,
-            'shoulder_lift_joint': 4.28,
+            'shoulder_lift_joint': 3.14,
             'shoulder_pan_joint': 3.14,
             'wrist_1_joint': 3.27,
-            'wrist_2_joint': -1.51,
+            'wrist_2_joint': 3.14,
             'wrist_3_joint': 0,
         }
     },
