@@ -1,5 +1,5 @@
 <launch>
-  <arg name="python" default="false" doc="Whether to use the python scripts (false)" />
+  <arg name="python" default="true" doc="Whether to use the python scripts [true|false]" />
 
   <arg name="development" default="true" doc="Whether run ARIAC in development mode [true|false]" />
   <arg unless="$(arg development)" name="development_args" value="" />

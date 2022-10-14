@@ -1,0 +1,11 @@
+--- ./b/em.py	2022-10-14 14:35:46.953058734 -0400
++++ ./a/em.py	2022-10-14 14:35:56.960915741 -0400
+@@ -44,7 +44,7 @@
+                 exec("""exec code in globals, locals""")
+ except NameError:
+     _unicode = str
+-    _str = bytes
++    _str = str
+     _unichr = chr
+     _input = input
+     try:

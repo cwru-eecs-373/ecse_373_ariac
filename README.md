@@ -19,11 +19,17 @@ To run the modified ARIAC simulation, use the following command:
 
 ### ROS Noetic
 
-This package has been updated to work with an updated version of the ARIAC 2019 package on ROS Noetic.  The update is incomplete of the ARIAC 2019 package, however, and there are some limitations.  The environment and trial configurations cannot be udated as the python script used to generate them does not work with python3.  
+This package was created for the ARIAC 2019 package which natively supported ROS Melodic.  That package has been updated, but incompletely because of a bug in the Python3 package of `empy`.  That bug has been fixed but not released in Ubuntu Focal at this time.
 
-Static files for `arm1.urdf.xacro`, `gear.urdf.xacro`, and `gear.world` have been generated and copied into this package.  The `gear.launch` file was also generated and copied into this package and is now included directly from the `ecse_373_ariac.launch` file.  The `ecse_373_ariac.launch` file was updated to use the static files by default, can work the old way by invoking the launch file with `python:=true`.
+Static files for `arm1.urdf.xacro`, `gear.urdf.xacro`, and `gear.world` have been generated and copied into this package as a work around to the bug.  The `gear.launch` file was also generated and copied into this package and is now included directly from the `ecse_373_ariac.launch` file.  The `ecse_373_ariac.launch` file was updated to be able to use the static files.  In order to use the work around, use this launch command with an argument for the launch file.
 
-The issue preventing full updating is in the `em` module for python3 which does not seem to actually work with python3 even though it is distributed as such.  At this time, a bug report is underdevelopment, but has not yet been submitted.
+> `roslaunch ecse_373_ariac ecse_373_ariac.launch python:=false`
+
+Included in this package is a patch that can be applied to the em.py file if administrative privileges are available.
+
+> ```sudo patch /usr/lib/python3/dist-packages/em.py < `rospack find ecse_373_ariac`/patches/empy.patch ```
+
+If this patch is applied, the package will work as usual.  When the bug in `empy` is fixed, the elements of this package that exist to work around it will be removed.
 
 ## Explanation
 
