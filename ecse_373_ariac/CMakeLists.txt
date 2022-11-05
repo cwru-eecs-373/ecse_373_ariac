@@ -5,7 +5,7 @@ project(ecse_373_ariac)
 # add_compile_options(-std=c++11)
 
 ## Add a subdirectory
-add_subdirectory(ur_kinematics)
+# add_subdirectory(ur_kinematics)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
