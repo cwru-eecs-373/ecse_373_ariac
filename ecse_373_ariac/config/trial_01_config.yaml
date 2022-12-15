@@ -23,7 +23,7 @@ orders:
       part_2:
         type: gear_part
         pose:
-          xyz: [0.1, 0.2, 0]
+          xyz: [-0.1, 0.2, 0]
           rpy: [0, 0, 0]
 
   order_1:
