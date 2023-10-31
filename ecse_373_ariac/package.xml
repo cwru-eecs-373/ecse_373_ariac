@@ -50,6 +50,7 @@
   <!--   <doc_depend>doxygen</doc_depend> -->
   <buildtool_depend>catkin</buildtool_depend>
   <build_depend>ur_kinematics</build_depend>
+  <build_depend>osrf_gear</build_depend>
   <exec_depend>osrf_gear</exec_depend>
   <exec_depend>ur_kinematics</exec_depend>
   <exec_depend>gazebo_ros_control</exec_depend>

@@ -11,7 +11,7 @@ project(ecse_373_ariac)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  # osrf_gear
+  osrf_gear
   ur_kinematics
 )
 
@@ -107,7 +107,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES ecse_373_ariac
-#  CATKIN_DEPENDS ariac3
+ CATKIN_DEPENDS osrf_gear
 #  DEPENDS system_lib
   DEPENDS ur_kinematics
 )
@@ -204,7 +204,7 @@ install(DIRECTORY
 )
 install(DIRECTORY
   scripts/
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/scripts
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}/scripts
 )
 install(DIRECTORY
   urdf/
