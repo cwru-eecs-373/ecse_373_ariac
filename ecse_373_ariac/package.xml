@@ -52,9 +52,9 @@
   <build_depend>ur_kinematics</build_depend>
   <exec_depend>osrf_gear</exec_depend>
   <exec_depend>ur_kinematics</exec_depend>
-  <exec_depend>ros-noetic-gazebo-ros-control</exec_depend>
-  <exec_depend>ros-noetic-effort-controllers</exec_depend>
-  <exec_depend>ros-noetic-joint-trajectory-controller</exec_depend>
+  <exec_depend>gazebo_ros_control</exec_depend>
+  <exec_depend>effort_controllers</exec_depend>
+  <exec_depend>joint_trajectory_controller</exec_depend>
 
   <!-- The export tag contains other, unspecified, tags -->
   <export>
