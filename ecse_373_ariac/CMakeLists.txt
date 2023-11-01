@@ -4,9 +4,6 @@ project(ecse_373_ariac)
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
 
-## Add a subdirectory
-# add_subdirectory(ur_kinematics)
-
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
@@ -166,6 +163,10 @@ include_directories(
 #   scripts/my_python_script
 #   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 # )
+catkin_install_python(PROGRAMS
+  scripts/gear.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
 
 ## Mark executables for installation
 ## See http://docs.ros.org/melodic/api/catkin/html/howto/format1/building_executables.html
@@ -204,7 +205,8 @@ install(DIRECTORY
 )
 install(DIRECTORY
   scripts/
-  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}/scripts
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+  PATTERN ".py" EXCLUDE
 )
 install(DIRECTORY
   urdf/
